@@ -1,5 +1,7 @@
 # BeatSaver Map Downloader for Spotify Tracks
 
+# If any errors are occurring i wont fix it this was a one time made project
+
 This script automatically downloads **Beat Saber** maps based on your **Spotify saved tracks**. It fetches your saved songs from Spotify and then uses the **BeatSaver API** to search for the first available map for each song in the format **Artist - Songname**. Once found, the map is downloaded and saved to a folder you specify.
 
 ## What Happens in the Script:
