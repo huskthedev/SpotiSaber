@@ -1,49 +1,38 @@
-What Happens in the Script:
-Spotify: It fetches your saved tracks using the Spotify Web API.
+# BeatSaver Map Downloader for Spotify Tracks
 
-BeatSaver: It uses the BeatSaver API to search for Beat Saber maps based on the Artist - Songname format.
+This script automatically downloads **Beat Saber** maps based on your **Spotify saved tracks**. It fetches your saved songs from Spotify and then uses the **BeatSaver API** to search for the first available map for each song in the format **Artist - Songname**. Once found, the map is downloaded and saved to a folder you specify.
 
-It will then automatically download the first map found for each song and save it in the folder you specify.
+## What Happens in the Script:
+- **Spotify**: The script fetches your saved tracks using the **Spotify Web API**.
+- **BeatSaver**: It uses the **BeatSaver API** to search for Beat Saber maps based on the `Artist - Songname` format.
+- It will then automatically download the **first map found** for each song and save it to the folder you specify.
 
-What You Need to Do for Tokens:
-To run the script, you'll need to get Spotify API tokens. Here's how you do it:
+---
 
-Create a Spotify Developer Account:
+## What You Need to Do for Tokens:
 
-Go to Spotify for Developers.
+### 1. **Spotify API Tokens**
 
-Log in with your Spotify account (or create one if you don't have it yet).
+To run this script, you need to obtain your **Spotify API tokens**. Here's how to do it:
 
-Create a New Spotify App:
+#### **Create a Spotify Developer Account:**
+- Go to [Spotify for Developers](https://developer.spotify.com/dashboard/applications).
+- Log in with your Spotify account (or create one if you don't have one).
 
-Click on Create an App.
+#### **Create a New Spotify App:**
+- Click on **Create an App**.
+- Name the app and provide a description.
+- After creating the app, you'll be provided with a **Client ID** and **Client Secret**. Copy these, as you'll need them for the script.
 
-Name it and provide a description.
+#### **Set the Redirect URI:**
+- In the Spotify Developer Dashboard, set the **Redirect URI** to:
 
-You'll be given a Client ID and Client Secret. Copy them, as you'll need them in the script.
 
-Set the Redirect URI:
+- This URI is used by the OAuth flow to redirect after logging in.
 
-In the Spotify Developer Dashboard, set the Redirect URI to:
+### 2. **Install Required Libraries:**
 
-arduino
-Kopieren
-Bearbeiten
-http://127.0.0.1:8888/callback/
-This URI is used by the OAuth flow to redirect after logging in.
+You will need to install the required libraries for running the script:
 
-Install Required Libraries:
-
-You’ll need spotipy and requests to run the script. Install them using:
-
-bash
-Kopieren
-Bearbeiten
-pip install spotipy requests
-Run the Script:
-
-When you run the script, it will open a browser window asking for authorization. Log in to your Spotify account and approve the app to access your saved tracks.
-
-Once authorized, the script will fetch your saved tracks and start downloading the maps automatically.
-
-Read me was written by ai script was selfmade
+```bash
+pip install -r requirements.txt
